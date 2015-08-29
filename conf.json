@@ -1,0 +1,34 @@
+[
+	{
+		"Name":"Config watcher",
+		"Files": [
+			"conf.json"
+			],
+		"Run": [
+			"echo Restarting monitor...",
+			"./monitor & kill -9 $PPID"
+		]
+	},
+	{
+		"Name":"Autorun",
+		"Files":[
+			"*.go",
+			"monitor"
+		],
+		"Run":[
+			"touch conf.json"
+		]
+	}	,
+	{
+		"Name":"Autopublish",
+		"Files":[
+			"publish"
+		],
+		"Run":[
+			"git add",
+			"git commit -m '`date`'",
+			"git push"
+		]
+	}
+	
+]

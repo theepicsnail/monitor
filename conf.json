@@ -18,17 +18,5 @@
 		"Run":[
 			"touch conf.json"
 		]
-	}	,
-	{
-		"Name":"Autopublish",
-		"Files":[
-			"publish"
-		],
-		"Run":[
-			"git add",
-			"git commit -m '`date`'",
-			"git push"
-		]
 	}
-	
 ]
